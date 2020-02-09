@@ -81,7 +81,7 @@
             // 
             this.txtBoxPlacaMoto.Location = new System.Drawing.Point(376, 246);
             this.txtBoxPlacaMoto.Multiline = true;
-            this.txtBoxPlacaMoto.Name = "txtBoxPlacaMoto";
+            this.txtBoxPlacaMoto.Name = "txtBoxPlacaVeiculo";
             this.txtBoxPlacaMoto.Size = new System.Drawing.Size(200, 25);
             this.txtBoxPlacaMoto.TabIndex = 4;
             // 

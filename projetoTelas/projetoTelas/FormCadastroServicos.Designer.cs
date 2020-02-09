@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.pessoasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.txtBoxPlacaMoto = new System.Windows.Forms.TextBox();
+            this.txtBoxPlacaVeiculo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxTelefone = new System.Windows.Forms.TextBox();
             this.txtBoxNomePessoa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.botaEditar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbServicosPrestados = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -53,18 +53,19 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.label3.Location = new System.Drawing.Point(229, 223);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 16);
+            this.label3.Size = new System.Drawing.Size(118, 16);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Placa da moto";
+            this.label3.Text = "Placa do Veículo";
             // 
-            // txtBoxPlacaMoto
+            // txtBoxPlacaVeiculo
             // 
-            this.txtBoxPlacaMoto.Enabled = false;
-            this.txtBoxPlacaMoto.Location = new System.Drawing.Point(361, 223);
-            this.txtBoxPlacaMoto.Multiline = true;
-            this.txtBoxPlacaMoto.Name = "txtBoxPlacaMoto";
-            this.txtBoxPlacaMoto.Size = new System.Drawing.Size(200, 25);
-            this.txtBoxPlacaMoto.TabIndex = 10;
+            this.txtBoxPlacaVeiculo.Enabled = false;
+            this.txtBoxPlacaVeiculo.Location = new System.Drawing.Point(361, 223);
+            this.txtBoxPlacaVeiculo.Multiline = true;
+            this.txtBoxPlacaVeiculo.Name = "txtBoxPlacaVeiculo";
+            this.txtBoxPlacaVeiculo.Size = new System.Drawing.Size(200, 25);
+            this.txtBoxPlacaVeiculo.TabIndex = 10;
+            this.txtBoxPlacaVeiculo.TextChanged += new System.EventHandler(this.txtBoxPlacaMoto_TextChanged);
             // 
             // label2
             // 
@@ -86,6 +87,7 @@
             this.txtBoxTelefone.Name = "txtBoxTelefone";
             this.txtBoxTelefone.Size = new System.Drawing.Size(200, 25);
             this.txtBoxTelefone.TabIndex = 8;
+            this.txtBoxTelefone.TextChanged += new System.EventHandler(this.txtBoxTelefone_TextChanged);
             // 
             // txtBoxNomePessoa
             // 
@@ -95,6 +97,7 @@
             this.txtBoxNomePessoa.Name = "txtBoxNomePessoa";
             this.txtBoxNomePessoa.Size = new System.Drawing.Size(200, 25);
             this.txtBoxNomePessoa.TabIndex = 7;
+            this.txtBoxNomePessoa.TextChanged += new System.EventHandler(this.txtBoxNomePessoa_TextChanged);
             // 
             // label1
             // 
@@ -121,6 +124,7 @@
             this.botaEditar.TabIndex = 12;
             this.botaEditar.Text = "Editar";
             this.botaEditar.UseVisualStyleBackColor = false;
+            this.botaEditar.Click += new System.EventHandler(this.botaEditar_Click);
             // 
             // label4
             // 
@@ -134,13 +138,14 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Dados do Cliente";
             // 
-            // textBox1
+            // txbServicosPrestados
             // 
-            this.textBox1.Location = new System.Drawing.Point(222, 300);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(566, 150);
-            this.textBox1.TabIndex = 14;
+            this.txbServicosPrestados.Location = new System.Drawing.Point(228, 300);
+            this.txbServicosPrestados.Multiline = true;
+            this.txbServicosPrestados.Name = "txbServicosPrestados";
+            this.txbServicosPrestados.Size = new System.Drawing.Size(566, 150);
+            this.txbServicosPrestados.TabIndex = 14;
+            this.txbServicosPrestados.TextChanged += new System.EventHandler(this.TxbServiçosPrestados);
             // 
             // label5
             // 
@@ -192,11 +197,11 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbServicosPrestados);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.botaEditar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtBoxPlacaMoto);
+            this.Controls.Add(this.txtBoxPlacaVeiculo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBoxTelefone);
             this.Controls.Add(this.txtBoxNomePessoa);
@@ -208,11 +213,11 @@
             this.Controls.SetChildIndex(this.txtBoxNomePessoa, 0);
             this.Controls.SetChildIndex(this.txtBoxTelefone, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.txtBoxPlacaMoto, 0);
+            this.Controls.SetChildIndex(this.txtBoxPlacaVeiculo, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.botaEditar, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.txbServicosPrestados, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.button4, 0);
@@ -225,14 +230,14 @@
         #endregion
         private System.Windows.Forms.BindingSource pessoasBindingSource;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtBoxPlacaMoto;
+        private System.Windows.Forms.TextBox txtBoxPlacaVeiculo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBoxTelefone;
         private System.Windows.Forms.TextBox txtBoxNomePessoa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button botaEditar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbServicosPrestados;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
