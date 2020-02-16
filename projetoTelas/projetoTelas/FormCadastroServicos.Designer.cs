@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.botaoExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pessoasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +66,6 @@
             this.txtBoxPlacaVeiculo.Name = "txtBoxPlacaVeiculo";
             this.txtBoxPlacaVeiculo.Size = new System.Drawing.Size(200, 25);
             this.txtBoxPlacaVeiculo.TabIndex = 10;
-            this.txtBoxPlacaVeiculo.TextChanged += new System.EventHandler(this.txtBoxPlacaMoto_TextChanged);
             // 
             // label2
             // 
@@ -87,7 +87,6 @@
             this.txtBoxTelefone.Name = "txtBoxTelefone";
             this.txtBoxTelefone.Size = new System.Drawing.Size(200, 25);
             this.txtBoxTelefone.TabIndex = 8;
-            this.txtBoxTelefone.TextChanged += new System.EventHandler(this.txtBoxTelefone_TextChanged);
             // 
             // txtBoxNomePessoa
             // 
@@ -97,7 +96,6 @@
             this.txtBoxNomePessoa.Name = "txtBoxNomePessoa";
             this.txtBoxNomePessoa.Size = new System.Drawing.Size(200, 25);
             this.txtBoxNomePessoa.TabIndex = 7;
-            this.txtBoxNomePessoa.TextChanged += new System.EventHandler(this.txtBoxNomePessoa_TextChanged);
             // 
             // label1
             // 
@@ -118,7 +116,7 @@
             this.botaEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botaEditar.ForeColor = System.Drawing.Color.White;
-            this.botaEditar.Location = new System.Drawing.Point(600, 89);
+            this.botaEditar.Location = new System.Drawing.Point(871, 91);
             this.botaEditar.Name = "botaEditar";
             this.botaEditar.Size = new System.Drawing.Size(75, 23);
             this.botaEditar.TabIndex = 12;
@@ -145,7 +143,6 @@
             this.txbServicosPrestados.Name = "txbServicosPrestados";
             this.txbServicosPrestados.Size = new System.Drawing.Size(566, 150);
             this.txbServicosPrestados.TabIndex = 14;
-            this.txbServicosPrestados.TextChanged += new System.EventHandler(this.TxbServiçosPrestados);
             // 
             // label5
             // 
@@ -189,11 +186,28 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.CliqueBotaoCancelar);
             // 
+            // botaoExcluir
+            // 
+            this.botaoExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.botaoExcluir.FlatAppearance.BorderSize = 0;
+            this.botaoExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoExcluir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoExcluir.ForeColor = System.Drawing.Color.White;
+            this.botaoExcluir.Location = new System.Drawing.Point(871, 147);
+            this.botaoExcluir.Name = "botaoExcluir";
+            this.botaoExcluir.Size = new System.Drawing.Size(75, 23);
+            this.botaoExcluir.TabIndex = 18;
+            this.botaoExcluir.Text = "Excluir";
+            this.botaoExcluir.UseVisualStyleBackColor = false;
+            this.botaoExcluir.Click += new System.EventHandler(this.botaoExcluir_Click);
+            //this.botaoExcluir.Click += new System.Windows.Forms.FormClosingEventArgs(this.botaoExcluir_Click);
+            // 
             // FormCadastroServicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 583);
+            this.Controls.Add(this.botaoExcluir);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -221,6 +235,7 @@
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.button4, 0);
+            this.Controls.SetChildIndex(this.botaoExcluir, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pessoasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -241,5 +256,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button botaoExcluir;
     }
 }

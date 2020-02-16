@@ -125,7 +125,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txbPesquisa;
+        public System.Windows.Forms.TextBox txbPesquisa;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;

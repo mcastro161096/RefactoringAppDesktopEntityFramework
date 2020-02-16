@@ -9,10 +9,16 @@ namespace projetoTelas
     public partial class FormCadastroServicos : FormInicial
     {
         public int CodPessoaClienteSelecionado { get; set; }
-        public FormCadastroServicos()
+        public FormResultadoPesquisa formResultadoPesquisa;
+
+        public FormCadastroServicos(FormResultadoPesquisa f)
         {
             InitializeComponent();
+            this.formResultadoPesquisa = f;
+
         }
+
+      
 
         public void Form4_Load(object sender, EventArgs e)
         {
@@ -27,20 +33,20 @@ namespace projetoTelas
             {
                 string cmdText = ($@"SELECT {nomesDasColunas[i]} FROM PESSOAS  WHERE CODPESSOA = {CodPessoaClienteSelecionado}");
                 SqlCommand comando = new SqlCommand(cmdText, conexao);
-                if(i == 0)
-                txtBoxNomePessoa.Text = comando.ExecuteScalar().ToString();
-                if(i == 1)
-                txtBoxTelefone.Text = comando.ExecuteScalar().ToString();
+                if (i == 0)
+                    txtBoxNomePessoa.Text = comando.ExecuteScalar().ToString();
+                if (i == 1)
+                    txtBoxTelefone.Text = comando.ExecuteScalar().ToString();
                 if (i == 2)
                 {
                     txtBoxPlacaVeiculo.Text = comando.ExecuteScalar().ToString();
                     //aqui eu atualizo os comandos para buscar o serviço
                     cmdText = ($@"SELECT DESCRICAOSERVICO FROM PESSOASERVICOPRESTADO WHERE CODPESSOA = {CodPessoaClienteSelecionado} ");
                     comando = new SqlCommand(cmdText, conexao);
-                    txbServicosPrestados.Text = comando.ExecuteScalar()?.ToString()?? "";
+                    txbServicosPrestados.Text = comando.ExecuteScalar()?.ToString() ?? "";
 
                 }
-            }       
+            }
         }
 
         private void CliqueBotaoCancelar(object sender, EventArgs e)
@@ -63,30 +69,15 @@ namespace projetoTelas
             }
             else
             {
+                pessoa.CodPessoa = CodPessoaClienteSelecionado;
+                pessoa.Nome = txtBoxNomePessoa.Text.ToString();
+                pessoa.Telefone = txtBoxTelefone.Text.ToString();
+                pessoa.PlacaVeiculo = txtBoxPlacaVeiculo.Text.ToString();
+                servico.DescricaoServico = txbServicosPrestados.Text.ToString();
                 servico.DescricaoServico = txbServicosPrestados.Text.ToString();
 
             }
             atualizadorPessoaServico.AtualizaPessoaEServico(pessoa, servico);
-        }
-
-        private void txtBoxNomePessoa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        public void txtBoxTelefone_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBoxPlacaMoto_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxbServiçosPrestados(object sender, EventArgs e)
-        {
-
         }
 
         private void botaEditar_Click(object sender, EventArgs e)
@@ -95,5 +86,31 @@ namespace projetoTelas
             txtBoxTelefone.Enabled = true;
             txtBoxPlacaVeiculo.Enabled = true;
         }
+
+        private void botaoExcluir_Click(object sender, EventArgs e)
+        {
+
+            var resultado = MessageBox.Show("Ao clicar em 'OK', o cliente será excluido e todos os seus serviços também. Deseja excluir", "", MessageBoxButtons.YesNoCancel);
+            if (resultado == DialogResult.Yes)
+            {
+                ConexaoComBd conexao = new ConexaoComBd();
+                conexao.ExcluirPessoaEServico(CodPessoaClienteSelecionado);
+                formResultadoPesquisa.dg.DataSource = conexao.RetornaPesquisa(txbPesquisa.Text);
+                FormCadastroServicos.ActiveForm.Close();
+
+            }
+
+            return;
+        }
+       
+
+
+
+
     }
+
 }
+
+               
+
+   

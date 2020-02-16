@@ -40,8 +40,6 @@ namespace projetoTelas
             comando.ExecuteScalar();
              var verificaSeJaTemServico = comando.ExecuteScalar();
 
-
-
             if (verificaSeJaTemServico == null)
             {
                 cmdText = ($@"INSERT INTO PESSOASERVICOPRESTADO (CODPESSOA, DESCRICAOSERVICO,  DATASERVICO ) VALUES ({pessoa.CodPessoa}, '{servico.DescricaoServico}', '{DateTime.Now.ToString()}')");
@@ -82,6 +80,26 @@ namespace projetoTelas
             DataTable dtLista = new DataTable();
             adaptador.Fill(dtLista);
             return dtLista;
+
+        }
+       
+        public void ExcluirPessoaEServico(int codPessoa)
+        {
+            try
+            {
+                var conexao = AbreConexaoComBd();
+                var cmdtxt = ($@"DELETE FROM PESSOASERVICOPRESTADO WHERE CODPESSOA = {codPessoa}
+                                 DELETE FROM PESSOAS WHERE CODPESSOA = {codPessoa} ");
+                SqlCommand comando = new SqlCommand(cmdtxt, conexao);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Excluído com sucesso");
+                
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+          
 
         }
 

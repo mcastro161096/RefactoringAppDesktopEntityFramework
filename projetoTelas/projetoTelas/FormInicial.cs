@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -26,19 +27,17 @@ namespace projetoTelas
             Application.Run(new FormCadastroCliente());
         }
 
+       
+
         public void botaoPesquisar(object sender, EventArgs e)
         {
-            //ConexaoComBd p = new ConexaoComBd();
             FormResultadoPesquisa frm3 = new FormResultadoPesquisa();
             var teste = new ConexaoComBd();
-
-            //frm3.dg.DataSource = dtLista;
+            frm3.txbPesquisa.Text = txbPesquisa.Text;
             frm3.dg.DataSource = teste.RetornaPesquisa(txbPesquisa.Text); //
-            
-
-
             frm3.ShowDialog();
         }
+        
 
         private void Novoform3()
         {
