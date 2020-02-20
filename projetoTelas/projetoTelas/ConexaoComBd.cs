@@ -42,11 +42,11 @@ namespace projetoTelas
 
             if (verificaSeJaTemServico == null)
             {
-                cmdText = ($@"INSERT INTO PESSOASERVICOPRESTADO (CODPESSOA, DESCRICAOSERVICO,  DATASERVICO ) VALUES ({pessoa.CodPessoa}, '{servico.DescricaoServico}', '{DateTime.Now.ToString()}')");
+                cmdText = ($@"INSERT INTO PESSOASERVICOPRESTADO (CODPESSOA, DESCRICAOSERVICO,  DATASERVICO ) VALUES ({pessoa.CodPessoa}, '{servico.DescricaoServico} +{servico.DataServico}', '{servico.DataServico}')");
                 //fazInsertNaTabela
                 comando = new SqlCommand(cmdText, conexao);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Serviço salvo com sucesso teste git");
+                MessageBox.Show("Serviço salvo com sucesso!");
             }
             else
             {

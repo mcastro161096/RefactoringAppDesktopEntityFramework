@@ -66,6 +66,7 @@ namespace projetoTelas
                 pessoa.Telefone = txtBoxTelefone.Text.ToString();
                 pessoa.PlacaVeiculo = txtBoxPlacaVeiculo.Text.ToString();
                 servico.DescricaoServico = txbServicosPrestados.Text.ToString();
+                servico.DataServico =  DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
             }
             else
             {
@@ -74,7 +75,7 @@ namespace projetoTelas
                 pessoa.Telefone = txtBoxTelefone.Text.ToString();
                 pessoa.PlacaVeiculo = txtBoxPlacaVeiculo.Text.ToString();
                 servico.DescricaoServico = txbServicosPrestados.Text.ToString();
-                servico.DescricaoServico = txbServicosPrestados.Text.ToString();
+                servico.DataServico = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
 
             }
             atualizadorPessoaServico.AtualizaPessoaEServico(pessoa, servico);
