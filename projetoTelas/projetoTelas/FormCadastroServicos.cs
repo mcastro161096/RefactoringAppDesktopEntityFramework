@@ -43,10 +43,14 @@ namespace projetoTelas
                     //aqui eu atualizo os comandos para buscar o serviço
                     cmdText = ($@"SELECT DESCRICAOSERVICO FROM PESSOASERVICOPRESTADO WHERE CODPESSOA = {CodPessoaClienteSelecionado} ");
                     comando = new SqlCommand(cmdText, conexao);
-                    txbServicosPrestados.Text = comando.ExecuteScalar()?.ToString() ?? "";
+                  //  txbServicosPrestados.Text = comando.ExecuteScalar()?.ToString() ?? "";
 
                 }
             }
+            FormGridServico formGridServico = new FormGridServico();
+            FormCadastroServicos form = new FormCadastroServicos(formGridServico);
+          
+
         }
 
         private void CliqueBotaoCancelar(object sender, EventArgs e)
@@ -65,7 +69,7 @@ namespace projetoTelas
                 pessoa.Nome = txtBoxNomePessoa.Text.ToString();
                 pessoa.Telefone = txtBoxTelefone.Text.ToString();
                 pessoa.PlacaVeiculo = txtBoxPlacaVeiculo.Text.ToString();
-                servico.DescricaoServico = txbServicosPrestados.Text.ToString();
+               // servico.DescricaoServico = txbServicosPrestados.Text.ToString();
                 servico.DataServico =  DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
             }
             else
@@ -74,7 +78,7 @@ namespace projetoTelas
                 pessoa.Nome = txtBoxNomePessoa.Text.ToString();
                 pessoa.Telefone = txtBoxTelefone.Text.ToString();
                 pessoa.PlacaVeiculo = txtBoxPlacaVeiculo.Text.ToString();
-                servico.DescricaoServico = txbServicosPrestados.Text.ToString();
+               // servico.DescricaoServico = txbServicosPrestados.Text.ToString();
                 servico.DataServico = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
 
             }
@@ -103,11 +107,16 @@ namespace projetoTelas
 
             return;
         }
-       
 
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
 
-
-
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
     }
 
 }
