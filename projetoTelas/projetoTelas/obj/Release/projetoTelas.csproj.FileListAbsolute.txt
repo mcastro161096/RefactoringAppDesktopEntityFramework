@@ -1,0 +1,16 @@
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\bin\Release\projetoTelas.exe.config
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\bin\Release\projetoTelas.exe.manifest
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\bin\Release\projetoTelas.application
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\bin\Release\projetoTelas.exe
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\bin\Release\projetoTelas.pdb
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.csprojAssemblyReference.cache
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormInicial.resources
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormCadastroCliente.resources
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormResultadoPesquisa.resources
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormCadastroServicos.resources
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.Properties.Resources.resources
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.csproj.GenerateResource.cache
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.exe.manifest
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.application
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.exe
+C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.pdb
