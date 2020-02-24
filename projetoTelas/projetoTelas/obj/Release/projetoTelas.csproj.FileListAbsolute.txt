@@ -14,3 +14,6 @@ C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\proj
 C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.application
 C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.exe
 C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.pdb
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.csprojAssemblyReference.cache
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.exe
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.pdb
