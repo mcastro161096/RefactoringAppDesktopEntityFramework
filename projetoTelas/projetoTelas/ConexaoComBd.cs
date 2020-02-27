@@ -12,7 +12,7 @@ namespace projetoTelas
 
         public SqlConnection AbreConexaoComBd()
         {
-            string conexaostring = "Data Source=mcastro\mcastro;Initial Catalog=dbProjeto;Persist Security Info=True;User ID=sa;Password=mcastro";
+            string conexaostring = "Data Source=MCASTRO;Initial Catalog=dbProjeto;Persist Security Info=True;User ID=sa;Password=mcastro";
             SqlConnection conexao = new SqlConnection(conexaostring);
             conexao.Open();
             return conexao;

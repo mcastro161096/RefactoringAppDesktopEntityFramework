@@ -17,3 +17,17 @@ C:\Users\mcastro\source\repos\NewRepo\projetoTelas\projetoTelas\obj\Release\proj
 C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.csprojAssemblyReference.cache
 C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.exe
 C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.pdb
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormGridServico.resources
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormCadastroCliente.resources
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormResultadoPesquisa.resources
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormCadastroServicos.resources
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.Properties.Resources.resources
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.csproj.GenerateResource.cache
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\bin\Release\projetoTelas.exe.config
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\bin\Release\projetoTelas.exe.manifest
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\bin\Release\projetoTelas.application
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\bin\Release\projetoTelas.exe
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\bin\Release\projetoTelas.pdb
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.exe.manifest
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.application
+C:\Users\mathe\source\repos\NewRepo-20200223T231040Z-001\NewRepo\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormInicial.resources

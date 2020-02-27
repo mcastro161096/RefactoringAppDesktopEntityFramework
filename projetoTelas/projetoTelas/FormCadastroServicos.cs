@@ -47,8 +47,8 @@ namespace projetoTelas
 
                 }
             }
-            FormGridServico formGridServico = new FormGridServico();
-            FormCadastroServicos form = new FormCadastroServicos(formGridServico);
+            //FormGridServico formGridServico = new FormGridServico();
+            //FormCadastroServicos form = new FormCadastroServicos(formGridServico);
           
 
         }

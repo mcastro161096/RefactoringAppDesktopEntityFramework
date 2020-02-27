@@ -117,35 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
-        TUUH5AEaATcjcGfWDgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHkSURBVEhL
-        tdVNSxVhGIfxYy9oRRQWQrYIwkUgJEgILis/gOFCd5FElAvJiJBcuI4ywn1Ri1wIrqz8BIEQBC6N1EoU
-        oqKVFZLVddm5YTgz05lzsD/84MzN8zLneeaZKdWQbtzHAj7jBz7gOYZwGHWlDS/wu4ovuIEGFM552DEG
-        2cI8HuIBpvERyYlmcABV04VviI6PcQLGuzyCJuxCP1aQnOSf/8Q7cH1t7F0PwjipnTcQg71GL47iZbmm
-        EeRmHNFwzAIZhZNF/Ss2y79nYZzkHay5tIeQyh6swUZvytf+A6+d4A5aYRpxFi3bV38zANvqmoXKnEE0
-        uImD8LH0+hKqZTc+wfbPLFQm7ladOI7vmEPRuE/2d7lScXNigmMWiE+MS1U0k7C/N5bKVcQEHrJ68gj2
-        d2lT6UFMcMFCHXkF+/sIp7IfccCmLNSYk/gF+9+1kJUnsMFPnLZQQ57CvvJgZqYd0WgRzSiSy4h+cfgy
-        M4FoKA9cB/KyF57+OOlurkuVmXtIDh5cLvekD6fgI+wS3MJbRDv37xwykzd4UR4s3wSZyRvcr5h74us6
-        +RZNeo/b8AnMTN7g7kUy++BH6AqGcRHujd+E3FxHkcHrzjoqB/cf7ViW8d8GN34wlrAK13UHUyr9AYNg
-        wNpqNQ7qAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
-        TUUH5AEaAgsTJwshBAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGQSURBVEhL
-        pdTNK0RRHMbxIYm85GVH2VpIXv4BxMpKKcRSWUhioawkslFWVtjJworFlKUV2VjZsaBEKS+hFMnL92Fu
-        nXucOzPneOpTM2fO/Z2553fvSeWRdmzhGu+4wiZa8O/M4gNfDlpsGsEZRVTsHBMYgO7AXGgE3qnAHVRg
-        H+VQinEAc4EblMIrg9DFb2hAEdbwALO43KMNXlmELj78+fa7DXZhOUYNvLMAFbhEI/Yy321dKMEGxpF3
-        kv6xrRYdmc/aqryjJj/DLigXmMMY1PRuaPwJXpmCXfwUlTATvEABVmAuEO1zGnqiJLrTT2PsFjl7Ugbd
-        hblVwyiECkRjSdT4xLTiDPZFu1Dq0JMxA/32Yox1Qk+XMyr+CLt4ZB1NqIa20asHaqCefbtokip4LbAK
-        u0g2zdB2qSdqfNbU4xWuQkm0XYoar+hQTDw65uEqkosaPwQd7yeYhDOupybEEf5E2+OaHEIvnPoSSz9c
-        k0P1IZZluCaGWkIsO3BNDLWNWHqh89w12ZfeCR0XJJX6BuKALhd2WpncAAAAAElFTkSuQmCC
-</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FormInicial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>FormInicial.resx;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

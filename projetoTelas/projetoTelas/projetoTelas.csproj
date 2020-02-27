@@ -128,11 +128,11 @@
     <EmbeddedResource Include="FormGridServico.resx">
       <DependentUpon>FormGridServico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormInicial.resx">
-      <DependentUpon>FormInicial.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroCliente.resx">
       <DependentUpon>FormCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInicial.resx">
+      <DependentUpon>FormInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormResultadoPesquisa.resx">
       <DependentUpon>FormResultadoPesquisa.cs</DependentUpon>

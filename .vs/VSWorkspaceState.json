@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\projetoTelas",
+    "\\projetoTelas\\ConsoleApp1",
     "\\projetoTelas\\projetoTelas"
   ],
-  "SelectedNode": "\\projetoTelas\\projetoTelas\\FormCadastroServicos.cs",
-  "PreviewInSolutionExplorer": true
+  "SelectedNode": "\\projetoTelas\\projetoTelas\\PessoaServicoPrestado.cs",
+  "PreviewInSolutionExplorer": false
 }
