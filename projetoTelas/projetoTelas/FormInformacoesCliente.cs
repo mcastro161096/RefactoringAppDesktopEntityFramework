@@ -110,7 +110,7 @@ namespace projetoTelas
             {
                 ConexaoComBd conexao = new ConexaoComBd();
                 conexao.ExcluirPessoaEServico(IdPessoaClienteSelecionado);
-                formResultadoPesquisa.dg.DataSource = conexao.RetornaPesquisa(txbPesquisa.Text);
+                formResultadoPesquisa.dg.DataSource = conexao.BuscaPessoas(txbPesquisa.Text);
                 FormInformacoesCliente.ActiveForm.Close();
 
             }

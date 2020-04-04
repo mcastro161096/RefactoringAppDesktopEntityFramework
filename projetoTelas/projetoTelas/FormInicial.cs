@@ -29,9 +29,10 @@ namespace projetoTelas
 
         public void botaoPesquisar(object sender, EventArgs e)
         {
+            ConexaoComBd conexaoComBd = new ConexaoComBd();
             FormResultadoPesquisa frm3 = new FormResultadoPesquisa();
             var db = new AppContext();
-            frm3.dg.DataSource = db.Pessoas.Where(c => c.Nome.Contains(txbPesquisa.Text.ToString()));
+            frm3.dg.DataSource = conexaoComBd.BuscaPessoas(txbPesquisa.Text.ToString());
             frm3.txbPesquisa.Text = txbPesquisa.Text;
             frm3.ShowDialog();
         }

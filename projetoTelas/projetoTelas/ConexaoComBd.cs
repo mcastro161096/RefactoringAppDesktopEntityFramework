@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace projetoTelas
@@ -68,10 +70,11 @@ namespace projetoTelas
 
         }
 
-        public object RetornaPesquisa(string valorPesquisado)
+        public object BuscaPessoas(string valorPesquisado)
         {
-            
-
+            var db = new AppContext();
+            IEnumerable<Pessoa> listaPessoas = db.Pessoas.Where(c => c.Nome.Contains(valorPesquisado));
+            return listaPessoas;
         }
 
         public void ExcluirPessoaEServico(int idPessoa)
