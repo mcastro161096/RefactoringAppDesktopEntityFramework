@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -69,16 +66,15 @@ namespace projetoTelas
                 try
                 {
                     ConexaoComBd atualizaServico = new ConexaoComBd();
-                    atualizaServico.AbreConexaoComBd();
-                    PessoaServicoPrestado servico = new PessoaServicoPrestado();
-                    servico.CodServico = IdServicoSelecionado;
-                    servico.CodPessoa = IdPessoaClienteSelecionado;
-                    servico.ValorTotal = Convert.ToDecimal(txbValorTotal.Text);
-                    servico.ValorPago = Convert.ToDecimal(txbValorPago.Text);
-                    servico.Pago = cmbxPago.SelectedItem.ToString();
-                    servico.DataServico = (dateTimePicker1.Value);
-                    servico.DescricaoServico = txbServicoPrestado.Text.ToString();
-                    atualizaServico.AtualizaServico(servico);
+                    ServicoPrestado servicoEditado = new ServicoPrestado();
+                    servicoEditado.IdServico = IdServicoSelecionado;
+                    servicoEditado.PessoaId = IdPessoaClienteSelecionado;
+                    servicoEditado.ValorTotal = Convert.ToDecimal(txbValorTotal.Text);
+                    servicoEditado.ValorPago = Convert.ToDecimal(txbValorPago.Text);
+                    servicoEditado.Pago = cmbxPago.SelectedItem.ToString();
+                    servicoEditado.DataServico = (dateTimePicker1.Value);
+                    servicoEditado.DescricaoServico = txbServicoPrestado.Text.ToString();
+                    atualizaServico.AtualizaServico(servicoEditado);
                     formInformacoesCliente.dgInformacoes.DataSource = formInformacoesCliente.PreencheGridFormInformacoesCliente();
                     this.Close();
                 }
