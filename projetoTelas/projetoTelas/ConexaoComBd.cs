@@ -41,10 +41,11 @@ namespace projetoTelas
         {
             try
             {
-                
+                var db = new AppContext();
+                db.ServicosPrestados.Add(servico);
                 MessageBox.Show("Serviço salvo com sucesso!");
             }
-            catch (System.Data.SqlClient.SqlException e) //when (e.ParamName.Contains("Dados binários ou de string seriam truncados."))
+            catch (System.Data.SqlClient.SqlException e) 
             {
                 MessageBox.Show(e.Message);
             }

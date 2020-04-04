@@ -104,7 +104,6 @@ namespace projetoTelas
 
         private void botaoExcluir_Click(object sender, EventArgs e)
         {
-
             var resultado = MessageBox.Show("Ao aceitar o cliente será excluido e todos os seus serviços também. Deseja excluir?", "", MessageBoxButtons.YesNoCancel);
             if (resultado == DialogResult.Yes)
             {
@@ -112,16 +111,13 @@ namespace projetoTelas
                 conexao.ExcluirPessoaEServico(IdPessoaClienteSelecionado);
                 formResultadoPesquisa.dg.DataSource = conexao.BuscaPessoas(txbPesquisa.Text);
                 FormInformacoesCliente.ActiveForm.Close();
-
             }
-
-            return;
         }
 
         private void botaoAdicionarServico_Click(object sender, EventArgs e)
         {
             FormCadastroServico formCadastroServico = new FormCadastroServico(this);
-            formCadastroServico.CodPessoaClienteSelecionado = this.IdPessoaClienteSelecionado;
+            formCadastroServico.IdPessoaClienteSelecionado = this.IdPessoaClienteSelecionado;
             formCadastroServico.ShowDialog();
         }
 

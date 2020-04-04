@@ -7,7 +7,7 @@ namespace projetoTelas
 
     public partial class FormCadastroServico : Form
     {
-        public int CodPessoaClienteSelecionado { get; set; }
+        public int IdPessoaClienteSelecionado { get; set; }
         public FormInformacoesCliente formInformacoesCliente;
         public FormCadastroServico(FormInformacoesCliente f)
         {
@@ -29,15 +29,15 @@ namespace projetoTelas
             {
                 try
                 {
-                    ConexaoComBd atualizaServico = new ConexaoComBd();
-                    PessoaServicoPrestado servico = new PessoaServicoPrestado();
-                    servico.CodPessoa = CodPessoaClienteSelecionado;
+                    ConexaoComBd insereServico = new ConexaoComBd();
+                    ServicoPrestado servico = new ServicoPrestado();
+                    servico.PessoaId = IdPessoaClienteSelecionado;
                     servico.ValorTotal = decimal.Parse(txbValorTotal.Text);
                     servico.ValorPago = decimal.Parse(txbValorPago.Text);
                     servico.Pago = cmbxPago.SelectedItem.ToString();
                     servico.DataServico = dateTimePicker1.Value;
                     servico.DescricaoServico = txbServicoPrestado.Text.ToString();
-                    atualizaServico.InsereServico(servico);
+                    insereServico.InsereServico(servico);
                     formInformacoesCliente.dgInformacoes.DataSource = formInformacoesCliente.PreencheGridFormInformacoesCliente();
                     this.Close();
                 }
