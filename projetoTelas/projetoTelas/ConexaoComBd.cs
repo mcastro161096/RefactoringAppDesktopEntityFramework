@@ -21,7 +21,6 @@ namespace projetoTelas
 
         public void AtualizaPessoa(Pessoa pessoaEditada)
         {
-
             try
             {
                 var db = new AppContext();
@@ -75,12 +74,15 @@ namespace projetoTelas
 
         }
 
-        public void ExcluirPessoaEServico(int codPessoa)
+        public void ExcluirPessoaEServico(int idPessoa)
         {
             try
             {
-               
-                MessageBox.Show("Excluído com sucesso");
+                var db = new AppContext();
+
+                Pessoa pessoa = db.Pessoas.Find(idPessoa);
+                db.Pessoas.Remove(pessoa);
+                MessageBox.Show("O cliente e todos os seus serviços foram excluídos com sucesso");
 
             }
             catch (Exception e)
