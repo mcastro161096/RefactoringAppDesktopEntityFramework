@@ -41,11 +41,9 @@ C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTela
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\bin\Release\EntityFramework.xml
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\bin\Release\EntityFramework.SqlServer.xml
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.csprojAssemblyReference.cache
-C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormGridServico.resources
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormCadastroCliente.resources
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormInicial.resources
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormResultadoPesquisa.resources
-C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormCadastroServicos.resources
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.Properties.Resources.resources
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.csproj.GenerateResource.cache
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.exe.manifest

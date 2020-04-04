@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TELEFONE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PLACAVEICULO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,10 +42,6 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NOME,
-            this.TELEFONE,
-            this.PLACAVEICULO});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(222, 24);
@@ -57,27 +50,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(638, 482);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // NOME
-            // 
-            this.NOME.DataPropertyName = "NOME";
-            this.NOME.HeaderText = "NOME";
-            this.NOME.Name = "NOME";
-            this.NOME.ReadOnly = true;
-            // 
-            // TELEFONE
-            // 
-            this.TELEFONE.DataPropertyName = "TELEFONE";
-            this.TELEFONE.HeaderText = "TELEFONE";
-            this.TELEFONE.Name = "TELEFONE";
-            this.TELEFONE.ReadOnly = true;
-            // 
-            // PLACAVEICULO
-            // 
-            this.PLACAVEICULO.DataPropertyName = "PLACAVEICULO";
-            this.PLACAVEICULO.HeaderText = "PLACAVEICULO";
-            this.PLACAVEICULO.Name = "PLACAVEICULO";
-            this.PLACAVEICULO.ReadOnly = true;
             // 
             // FormResultadoPesquisa
             // 
@@ -99,8 +71,5 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn cODPESSOADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PLACAVEICULO;
     }
 }

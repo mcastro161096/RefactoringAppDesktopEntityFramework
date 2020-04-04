@@ -18,14 +18,19 @@ namespace projetoTelas
             IEnumerable<Pessoa> listaPessoas = db.Pessoas.Where(c => c.Nome.Contains(valorPesquisado));
             return listaPessoas;
         }
-        public void InserePessoa(Pessoa p)
+        public void InserePessoa(Pessoa pessoa)
         {
-           
-            MessageBox.Show("Salvo com sucesso");
-
-
-            return;
-        }
+            try
+            {
+                var db = new AppContext();
+                db.Pessoas.Add(pessoa);
+                MessageBox.Show("Salvo com sucesso");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+         }
 
         public void AtualizaPessoa(Pessoa pessoaEditada)
         {

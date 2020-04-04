@@ -94,11 +94,6 @@
   <ItemGroup>
     <Compile Include="AppContext.cs" />
     <Compile Include="MetodosPessoa.cs" />
-    <Compile Include="dbProjetoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbProjetoDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FormCadastroServico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,17 +163,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="dbProjetoDataSet.xsc">
-      <DependentUpon>dbProjetoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dbProjetoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbProjetoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbProjetoDataSet.xss">
-      <DependentUpon>dbProjetoDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="projetoTelas_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
