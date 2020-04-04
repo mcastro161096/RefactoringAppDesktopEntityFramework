@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -32,9 +34,9 @@ namespace projetoTelas
         public void botaoPesquisar(object sender, EventArgs e)
         {
             FormResultadoPesquisa frm3 = new FormResultadoPesquisa();
-            var teste = new ConexaoComBd();
-            frm3.txbPesquisa.Text = txbPesquisa.Text;
-            frm3.dg.DataSource = teste.RetornaPesquisa(txbPesquisa.Text); //
+            var db = new AppContext();
+            var pessoas = db.Pessoas.Where(c => c.Nome.Contains(txbPesquisa.Text.ToString()));
+            frm3.dg.DataSource = pessoas;
             frm3.ShowDialog();
         }
         

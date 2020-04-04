@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace projetoTelas
 {
-    class AppContext : DbContext
+   public class AppContext : DbContext
     {
         public AppContext() : base("name=DbApp")
         {
             Database.SetInitializer<AppContext>(new CreateDatabaseIfNotExists<AppContext>());
         }
-        DbSet<Pessoa> Pessoas { get; set; }
-        DbSet<ServicoPrestado> ServicosPrestados { get; set; }
+      public  DbSet<Pessoa> Pessoas { get; set; }
+      public DbSet<ServicoPrestado> ServicosPrestados { get; set; }
     }
 }
