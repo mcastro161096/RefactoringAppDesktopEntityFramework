@@ -99,11 +99,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbProjetoDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FormGridServico.cs">
+    <Compile Include="FormCadastroServico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGridServico.Designer.cs">
-      <DependentUpon>FormGridServico.cs</DependentUpon>
+    <Compile Include="FormCadastroServico.Designer.cs">
+      <DependentUpon>FormCadastroServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditaOuExcluiServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditaOuExcluiServico.Designer.cs">
+      <DependentUpon>FormEditaOuExcluiServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInformacoesCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInformacoesCliente.Designer.cs">
+      <DependentUpon>FormInformacoesCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInicial.cs">
       <SubType>Form</SubType>
@@ -123,30 +135,27 @@
     <Compile Include="FormResultadoPesquisa.Designer.cs">
       <DependentUpon>FormResultadoPesquisa.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCadastroServicos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCadastroServicos.Designer.cs">
-      <DependentUpon>FormCadastroServicos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicoPrestado.cs" />
-    <EmbeddedResource Include="FormGridServico.resx">
-      <DependentUpon>FormGridServico.cs</DependentUpon>
+    <EmbeddedResource Include="FormCadastroServico.resx">
+      <DependentUpon>FormCadastroServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditaOuExcluiServico.resx">
+      <DependentUpon>FormEditaOuExcluiServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroCliente.resx">
       <DependentUpon>FormCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInformacoesCliente.resx">
+      <DependentUpon>FormInformacoesCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicial.resx">
       <DependentUpon>FormInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormResultadoPesquisa.resx">
       <DependentUpon>FormResultadoPesquisa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormCadastroServicos.resx">
-      <DependentUpon>FormCadastroServicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

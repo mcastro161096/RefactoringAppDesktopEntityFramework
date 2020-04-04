@@ -63,7 +63,8 @@
             this.txbPesquisa.Location = new System.Drawing.Point(38, 104);
             this.txbPesquisa.Name = "txbPesquisa";
             this.txbPesquisa.Size = new System.Drawing.Size(148, 23);
-            this.txbPesquisa.TabIndex = 2;
+            this.txbPesquisa.TabIndex = 1;
+            this.txbPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPesquisa_KeyPress);
             // 
             // panel1
             // 

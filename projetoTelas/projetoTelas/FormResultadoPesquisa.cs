@@ -10,32 +10,57 @@ namespace projetoTelas
         {
             InitializeComponent();
             dg = dataGridView1;
-        }
-       
+            //var teste = new ConexaoComBd();
+            //dg.DataSource = teste.RetornaPesquisa(txbPesquisa.Text);
 
-        private void Form3_Load(object sender, EventArgs e)
+        }
+        public void FormResultadoPesquisa_Load_1(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'dbProjetoDataSet.PESSOAS'. Você pode movê-la ou removê-la conforme necessário.
-            this.pESSOASTableAdapter.Fill(this.dbProjetoDataSet.PESSOAS);
-
+            var teste = new ConexaoComBd();
+            dg.DataSource = teste.RetornaPesquisa(txbPesquisa.Text);
         }
-
 
         public void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            FormCadastroServicos frm4 = new FormCadastroServicos(this);
-            int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-            frm4.IdPessoaClienteSelecionado = Convert.ToInt32(selectedRow.Cells[0].Value);
-            frm4.txbPesquisa.Text = txbPesquisa.Text;
-            frm4.ShowDialog();
-            //private void button1_Click(object sender, EventArgs e)
-            //{
-            //    FormFilho f = new FormFilho(this);
-            //    f.Show();
-            //    this.Text = "Eu sou o FormPai";
-            //}
+
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FormResultadoPesquisa_Load(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        public void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                FormInformacoesCliente frm4 = new FormInformacoesCliente(this);
+                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+                frm4.CodPessoaClienteSelecionado = Convert.ToInt32(selectedRow.Cells[0].Value);
+                frm4.txbPesquisa.Text = txbPesquisa.Text;
+                frm4.ShowDialog();
+                //private void button1_Click(object sender, EventArgs e)
+                //{
+                //    FormFilho f = new FormFilho(this);
+                //    f.Show();
+                //    this.Text = "Eu sou o FormPai";
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+
     }
 }

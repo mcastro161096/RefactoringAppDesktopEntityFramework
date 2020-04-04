@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -29,17 +24,15 @@ namespace projetoTelas
             Application.Run(new FormCadastroCliente());
         }
 
-       
+
 
         public void botaoPesquisar(object sender, EventArgs e)
         {
             FormResultadoPesquisa frm3 = new FormResultadoPesquisa();
-            var db = new AppContext();
-            var pessoas = db.Pessoas.Where(c => c.Nome.Contains(txbPesquisa.Text.ToString()));
-            frm3.dg.DataSource = pessoas;
+            frm3.txbPesquisa.Text = txbPesquisa.Text;
             frm3.ShowDialog();
         }
-        
+
 
         private void Novoform3()
         {
@@ -50,6 +43,12 @@ namespace projetoTelas
         {
             FormCadastroCliente frm2 = new FormCadastroCliente();
             frm2.ShowDialog();
+        }
+
+        private void txbPesquisa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.Equals((char)Keys.Enter))
+                this.botaoPesquisar(sender, e);
         }
     }
 }

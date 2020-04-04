@@ -26,8 +26,8 @@ namespace projetoTelas
                 Telefone = telefone,
                 PlacaVeiculo = placaVeiculo
             };
-            var c = new ConexaoComBd(); 
-                c.InserePessoa(p);
+            var c = new ConexaoComBd();
+            c.InserePessoa(p);
             txtBoxNomePessoa.Clear();
             txtBoxTelefone.Clear();
             txtBoxPlacaMoto.Clear();
