@@ -8,7 +8,7 @@ namespace projetoTelas
 {
     public partial class FormInformacoesCliente : FormInicial
     {
-        public int CodPessoaClienteSelecionado { get; set; }
+        public int IdPessoaClienteSelecionado { get; set; }
         public FormResultadoPesquisa formResultadoPesquisa;
         public DataGridView dgInformacoes { get; set; }
 
@@ -25,7 +25,7 @@ namespace projetoTelas
         public void Form4_Load(object sender, EventArgs e)
         {
 
-            // MessageBox.Show(CodPessoaClienteSelecionado.ToString());
+            // MessageBox.Show(IdPessoaClienteSelecionado.ToString());
             var conexaoBuscaPessoa = new ConexaoComBd();
             var conexao = conexaoBuscaPessoa.AbreConexaoComBd();
             string[] nomesDasColunas = new string[3];
@@ -34,7 +34,7 @@ namespace projetoTelas
             nomesDasColunas[2] = "PLACAVEICULO";
             for (int i = 0; i < 3; i++)
             {
-                string cmdText = ($@"SELECT {nomesDasColunas[i]} FROM PESSOAS  WHERE CODPESSOA = {CodPessoaClienteSelecionado}");
+                string cmdText = ($@"SELECT {nomesDasColunas[i]} FROM PESSOAS  WHERE CODPESSOA = {IdPessoaClienteSelecionado}");
                 SqlCommand comando = new SqlCommand(cmdText, conexao);
                 if (i == 0)
                     txtBoxNomePessoa.Text = comando.ExecuteScalar().ToString();
@@ -54,7 +54,7 @@ namespace projetoTelas
         {
             var conexaoBuscaPessoa = new ConexaoComBd();
             var conexao = conexaoBuscaPessoa.AbreConexaoComBd();
-            var cmdText = ($@"SELECT * FROM PESSOASERVICOPRESTADO WHERE CODPESSOA = {CodPessoaClienteSelecionado} ORDER BY DATASERVICO DESC ");
+            var cmdText = ($@"SELECT * FROM PESSOASERVICOPRESTADO WHERE CODPESSOA = {IdPessoaClienteSelecionado} ORDER BY DATASERVICO DESC ");
             var comando = new SqlCommand(cmdText, conexao);
             SqlDataAdapter adaptador = new SqlDataAdapter(comando);
             DataTable dtLista = new DataTable();
@@ -106,7 +106,7 @@ namespace projetoTelas
             Pessoa pessoa = new Pessoa();
             if (txtBoxNomePessoa.Enabled == true)
             {
-                pessoa.CodPessoa = CodPessoaClienteSelecionado;
+                pessoa.CodPessoa = IdPessoaClienteSelecionado;
                 pessoa.Nome = txtBoxNomePessoa.Text.ToString();
                 pessoa.Telefone = txtBoxTelefone.Text.ToString();
                 pessoa.PlacaVeiculo = txtBoxPlacaVeiculo.Text.ToString();
@@ -145,7 +145,7 @@ namespace projetoTelas
             if (resultado == DialogResult.Yes)
             {
                 ConexaoComBd conexao = new ConexaoComBd();
-                conexao.ExcluirPessoaEServico(CodPessoaClienteSelecionado);
+                conexao.ExcluirPessoaEServico(IdPessoaClienteSelecionado);
                 formResultadoPesquisa.dg.DataSource = conexao.RetornaPesquisa(txbPesquisa.Text);
                 FormInformacoesCliente.ActiveForm.Close();
 
@@ -157,7 +157,7 @@ namespace projetoTelas
         private void botaoAdicionarServico_Click(object sender, EventArgs e)
         {
             FormCadastroServico formCadastroServico = new FormCadastroServico(this);
-            formCadastroServico.CodPessoaClienteSelecionado = this.CodPessoaClienteSelecionado;
+            formCadastroServico.CodPessoaClienteSelecionado = this.IdPessoaClienteSelecionado;
             formCadastroServico.ShowDialog();
         }
 
@@ -169,7 +169,7 @@ namespace projetoTelas
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             formEditaOuExcluiServico.CodServicoSelecionado = Convert.ToInt32(selectedRow.Cells[0].Value);
-            formEditaOuExcluiServico.CodPessoaClienteSelecionado = this.CodPessoaClienteSelecionado;
+            formEditaOuExcluiServico.CodPessoaClienteSelecionado = this.IdPessoaClienteSelecionado;
             formEditaOuExcluiServico.ShowDialog();
         }
     }

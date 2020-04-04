@@ -53,3 +53,6 @@ C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTela
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.csproj.CopyComplete
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.exe
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.pdb
+C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormCadastroServico.resources
+C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormEditaOuExcluiServico.resources
+C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormInformacoesCliente.resources
