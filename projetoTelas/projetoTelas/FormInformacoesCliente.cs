@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using static projetoTelas.ConexaoComBd;
 
 namespace projetoTelas
 {
@@ -52,12 +53,11 @@ namespace projetoTelas
                         linha.DefaultCellStyle.BackColor = Color.Yellow;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                MessageBox.Show(e.Message);
             }
-
-
-            return dtLista;
+            return servicos;
         }
         private void CliqueBotaoCancelar(object sender, EventArgs e)
         {
@@ -66,15 +66,15 @@ namespace projetoTelas
 
         private void CliqueBotaoSalvar(object sender, EventArgs e)
         {
-            ConexaoComBd atualizadorPessoa = new ConexaoComBd();
+            ConexaoComBd conexaoComBd = new ConexaoComBd();
             Pessoa pessoa = new Pessoa();
             if (txtBoxNomePessoa.Enabled == true)
             {
-                pessoa.CodPessoa = IdPessoaClienteSelecionado;
+                pessoa.IdPessoa = IdPessoaClienteSelecionado;
                 pessoa.Nome = txtBoxNomePessoa.Text.ToString();
                 pessoa.Telefone = txtBoxTelefone.Text.ToString();
                 pessoa.PlacaVeiculo = txtBoxPlacaVeiculo.Text.ToString();
-                atualizadorPessoa.AtualizaPessoa(pessoa);
+               conexaoComBd.AtualizaPessoa(pessoa);
                 formResultadoPesquisa.FormResultadoPesquisa_Load_1(sender, e);
             }
             else
