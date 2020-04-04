@@ -92,6 +92,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppContext.cs" />
     <Compile Include="ConexaoComBd.cs" />
     <Compile Include="dbProjetoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
