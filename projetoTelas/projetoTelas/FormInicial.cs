@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -29,6 +30,8 @@ namespace projetoTelas
         public void botaoPesquisar(object sender, EventArgs e)
         {
             FormResultadoPesquisa frm3 = new FormResultadoPesquisa();
+            var db = new AppContext();
+            frm3.dg.DataSource = db.Pessoas.Where(c => c.Nome.Contains(txbPesquisa.Text.ToString()));
             frm3.txbPesquisa.Text = txbPesquisa.Text;
             frm3.ShowDialog();
         }

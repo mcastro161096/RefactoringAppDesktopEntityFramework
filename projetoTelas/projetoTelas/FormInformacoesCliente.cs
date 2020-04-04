@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace projetoTelas
@@ -24,58 +27,19 @@ namespace projetoTelas
 
         public void Form4_Load(object sender, EventArgs e)
         {
-
-            // MessageBox.Show(IdPessoaClienteSelecionado.ToString());
-            var conexaoBuscaPessoa = new ConexaoComBd();
-            var conexao = conexaoBuscaPessoa.AbreConexaoComBd();
-            string[] nomesDasColunas = new string[3];
-            nomesDasColunas[0] = "NOME";
-            nomesDasColunas[1] = "TELEFONE";
-            nomesDasColunas[2] = "PLACAVEICULO";
-            for (int i = 0; i < 3; i++)
-            {
-                string cmdText = ($@"SELECT {nomesDasColunas[i]} FROM PESSOAS  WHERE CODPESSOA = {IdPessoaClienteSelecionado}");
-                SqlCommand comando = new SqlCommand(cmdText, conexao);
-                if (i == 0)
-                    txtBoxNomePessoa.Text = comando.ExecuteScalar().ToString();
-                if (i == 1)
-                    txtBoxTelefone.Text = comando.ExecuteScalar().ToString();
-                if (i == 2)
-                {
-                    txtBoxPlacaVeiculo.Text = comando.ExecuteScalar().ToString();
-                    //aqui eu atualizo os comandos para buscar o serviço
-                }
-
-            }
+            var db = new AppContext();
+            Pessoa pessoa = db.Pessoas.Find(IdPessoaClienteSelecionado);
+            txtBoxNomePessoa.Text = pessoa.Nome;
+            txtBoxTelefone.Text = pessoa.Telefone;
+            txtBoxPlacaVeiculo.Text = pessoa.PlacaVeiculo;
             this.PreencheGridFormInformacoesCliente();
 
         }
         public object PreencheGridFormInformacoesCliente()
         {
-            var conexaoBuscaPessoa = new ConexaoComBd();
-            var conexao = conexaoBuscaPessoa.AbreConexaoComBd();
-            var cmdText = ($@"SELECT * FROM PESSOASERVICOPRESTADO WHERE CODPESSOA = {IdPessoaClienteSelecionado} ORDER BY DATASERVICO DESC ");
-            var comando = new SqlCommand(cmdText, conexao);
-            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
-            DataTable dtLista = new DataTable();
-            adaptador.Fill(dtLista);
-            //dg.DataSource = dtLista;
-            //PessoaServicoPrestado p = new PessoaServicoPrestado();
-            //List<PessoaServicoPrestado> listaservicos = new List<PessoaServicoPrestado>();
-            //foreach (DataRow dataRow in dtLista.Rows)
-            //{
-            //    //Adiciona na lista Especificando a clouna 
-            //    p.CodPessoa = Convert.ToInt32(dataRow["CODPESSOA"]);
-            //    p.CodServico = Convert.ToInt32(dataRow["CODSERVICO"]);
-            //    p.DescricaoServico = dataRow["DESCRICAOSERVICO"].ToString();
-            //    p.ValorTotal = Convert.ToDouble(dataRow["VALORTOTAL"]);
-            //    p.ValorPago = Convert.ToDouble((dataRow["VALORPAGO"]));
-            //    p.Pago = dataRow["PAGO"].ToString();
-            //    p.DataServico = Convert.ToDateTime(dataRow["DATASERVICO"]);
-            //    listaservicos.Add(p);
-            //}
-            dgInformacoes.DataSource = dtLista;
-            //dg.DataSource = listaservicos.ToArray();
+            var db = new AppContext();
+            IEnumerable<ServicoPrestado> servicos = db.ServicosPrestados.Where(c => c.PessoaId ==IdPessoaClienteSelecionado);
+            dgInformacoes.DataSource = servicos;
             try
             {
                 foreach (DataGridViewRow linha in dgInformacoes.Rows)

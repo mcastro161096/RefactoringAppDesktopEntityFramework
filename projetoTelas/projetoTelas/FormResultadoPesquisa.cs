@@ -13,8 +13,7 @@ namespace projetoTelas
         }
         public void FormResultadoPesquisa_Load_1(object sender, EventArgs e)
         {
-            var teste = new ConexaoComBd();
-            dg.DataSource = teste.RetornaPesquisa(txbPesquisa.Text);
+            
         }
         public void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
