@@ -108,7 +108,7 @@ namespace projetoTelas
             if (resultado == DialogResult.Yes)
             {
                 ConexaoComBd conexao = new ConexaoComBd();
-                conexao.ExcluirPessoaEServico(IdPessoaClienteSelecionado);
+                conexao.ExcluiPessoaEServico(IdPessoaClienteSelecionado);
                 formResultadoPesquisa.dg.DataSource = conexao.BuscaPessoas(txbPesquisa.Text);
                 FormInformacoesCliente.ActiveForm.Close();
             }
@@ -128,7 +128,7 @@ namespace projetoTelas
             FormEditaOuExcluiServico formEditaOuExcluiServico = new FormEditaOuExcluiServico(this);
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-            formEditaOuExcluiServico.CodServicoSelecionado = Convert.ToInt32(selectedRow.Cells[0].Value);
+            formEditaOuExcluiServico.IdServicoSelecionado = Convert.ToInt32(selectedRow.Cells[0].Value);
             formEditaOuExcluiServico.CodPessoaClienteSelecionado = this.IdPessoaClienteSelecionado;
             formEditaOuExcluiServico.ShowDialog();
         }

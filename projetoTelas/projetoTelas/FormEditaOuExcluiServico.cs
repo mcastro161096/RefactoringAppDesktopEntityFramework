@@ -9,7 +9,7 @@ namespace projetoTelas
 {
     public partial class FormEditaOuExcluiServico : Form
     {
-        public int CodServicoSelecionado { get; set; }
+        public int IdServicoSelecionado { get; set; }
         public int CodPessoaClienteSelecionado { get; set; }
 
         public FormInformacoesCliente formInformacoesCliente;
@@ -21,34 +21,19 @@ namespace projetoTelas
         }
         private void FormEditaOuExcluiServico_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show(CodServicoSelecionado.ToString());
+            //MessageBox.Show(IdServicoSelecionado.ToString());
             var buscaServico = new ConexaoComBd();
-            var conexao = buscaServico.AbreConexaoComBd();
-            var cmdtext = ($@"SELECT * FROM PESSOASERVICOPRESTADO WHERE CODSERVICO = {CodServicoSelecionado}");
-            var comando = new SqlCommand(cmdtext, conexao);
-            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
-            DataTable dtlista = new DataTable();
-            adaptador.Fill(dtlista);
-            PessoaServicoPrestado p = new PessoaServicoPrestado();
-            List<PessoaServicoPrestado> listaservicos = new List<PessoaServicoPrestado>();
-            foreach (DataRow dataRow in dtlista.Rows)
-            {
-                //Adiciona na lista Especificando a clouna 
-                p.CodPessoa = Convert.ToInt32(dataRow["CODPESSOA"]);
-                p.CodServico = Convert.ToInt32(dataRow["CODSERVICO"]);
-                p.DescricaoServico = dataRow["DESCRICAOSERVICO"].ToString();
-                p.ValorTotal = Convert.ToDecimal(dataRow["VALORTOTAL"]);
-                p.ValorPago = Convert.ToDecimal((dataRow["VALORPAGO"]));
-                p.Pago = dataRow["PAGO"].ToString();
-                p.DataServico = Convert.ToDateTime(dataRow["DATASERVICO"]);
-                listaservicos.Add(p);
-            }
-            txbValorTotal.Text = string.Format("{0:#,##0.00}", Double.Parse(p.ValorTotal.ToString()));
-            txbValorPago.Text = string.Format("{0:#,##0.00}", Double.Parse(p.ValorPago.ToString()));
-            cmbxPago.Text = p.Pago.ToString();
+            var db = new AppContext();
+
+            ServicoPrestado servico = new ServicoPrestado();
+            
+            
+            txbValorTotal.Text = string.Format("{0:#,##0.00}", Double.Parse(servico.ValorTotal.ToString()));
+            txbValorPago.Text = string.Format("{0:#,##0.00}", Double.Parse(servico.ValorPago.ToString()));
+            cmbxPago.Text = servico.Pago.ToString();
             dateTimePicker1.CustomFormat = "MM/dd/yyy";
-            dateTimePicker1.Value = p.DataServico;
-            txbServicoPrestado.Text = p.DescricaoServico.ToString();
+            dateTimePicker1.Value = servico.DataServico;
+            txbServicoPrestado.Text = servico.DescricaoServico.ToString();
             this.DesabilitaCampos(false);
         }
 
@@ -89,7 +74,7 @@ namespace projetoTelas
                     ConexaoComBd atualizaServico = new ConexaoComBd();
                     atualizaServico.AbreConexaoComBd();
                     PessoaServicoPrestado servico = new PessoaServicoPrestado();
-                    servico.CodServico = CodServicoSelecionado;
+                    servico.CodServico = IdServicoSelecionado;
                     servico.CodPessoa = CodPessoaClienteSelecionado;
                     servico.ValorTotal = Convert.ToDecimal(txbValorTotal.Text);
                     servico.ValorPago = Convert.ToDecimal(txbValorPago.Text);
@@ -116,7 +101,7 @@ namespace projetoTelas
                 {
                     ConexaoComBd excluiServico = new ConexaoComBd();
                     excluiServico.AbreConexaoComBd();
-                    excluiServico.ExcluiServico(CodServicoSelecionado);
+                    excluiServico.ExcluiServico(IdServicoSelecionado);
                 }
                 catch (Exception execaoAoExcluirServico)
                 {
