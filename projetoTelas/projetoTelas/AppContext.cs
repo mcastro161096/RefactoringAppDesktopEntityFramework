@@ -13,5 +13,7 @@ namespace projetoTelas
         {
             Database.SetInitializer<AppContext>(new CreateDatabaseIfNotExists<AppContext>());
         }
+        DbSet<Pessoa> Pessoas { get; set; }
+        DbSet<ServicoPrestado> ServicosPrestados { get; set; }
     }
 }
