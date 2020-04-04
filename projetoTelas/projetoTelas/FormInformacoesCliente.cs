@@ -129,7 +129,7 @@ namespace projetoTelas
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             formEditaOuExcluiServico.IdServicoSelecionado = Convert.ToInt32(selectedRow.Cells[0].Value);
-            formEditaOuExcluiServico.CodPessoaClienteSelecionado = this.IdPessoaClienteSelecionado;
+            formEditaOuExcluiServico.IdPessoaClienteSelecionado = this.IdPessoaClienteSelecionado;
             formEditaOuExcluiServico.ShowDialog();
         }
     }

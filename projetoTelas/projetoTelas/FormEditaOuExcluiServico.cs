@@ -10,7 +10,7 @@ namespace projetoTelas
     public partial class FormEditaOuExcluiServico : Form
     {
         public int IdServicoSelecionado { get; set; }
-        public int CodPessoaClienteSelecionado { get; set; }
+        public int IdPessoaClienteSelecionado { get; set; }
 
         public FormInformacoesCliente formInformacoesCliente;
         public FormEditaOuExcluiServico(FormInformacoesCliente f)
@@ -24,10 +24,7 @@ namespace projetoTelas
             //MessageBox.Show(IdServicoSelecionado.ToString());
             var buscaServico = new ConexaoComBd();
             var db = new AppContext();
-
-            ServicoPrestado servico = new ServicoPrestado();
-            
-            
+            ServicoPrestado servico = buscaServico.BuscaServico(IdServicoSelecionado);
             txbValorTotal.Text = string.Format("{0:#,##0.00}", Double.Parse(servico.ValorTotal.ToString()));
             txbValorPago.Text = string.Format("{0:#,##0.00}", Double.Parse(servico.ValorPago.ToString()));
             cmbxPago.Text = servico.Pago.ToString();
@@ -75,7 +72,7 @@ namespace projetoTelas
                     atualizaServico.AbreConexaoComBd();
                     PessoaServicoPrestado servico = new PessoaServicoPrestado();
                     servico.CodServico = IdServicoSelecionado;
-                    servico.CodPessoa = CodPessoaClienteSelecionado;
+                    servico.CodPessoa = IdPessoaClienteSelecionado;
                     servico.ValorTotal = Convert.ToDecimal(txbValorTotal.Text);
                     servico.ValorPago = Convert.ToDecimal(txbValorPago.Text);
                     servico.Pago = cmbxPago.SelectedItem.ToString();

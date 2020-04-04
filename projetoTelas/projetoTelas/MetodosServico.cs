@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace projetoTelas
 {
-   public partial class ConexaoComBd
+    public partial class ConexaoComBd
     {
+        public ServicoPrestado BuscaServico(int idServico)
+        {
+            var db = new AppContext();
+            ServicoPrestado servico = db.ServicosPrestados.Find(idServico);
+            return servico;
+        }
         public void InsereServico(ServicoPrestado servico)
         {
             try
