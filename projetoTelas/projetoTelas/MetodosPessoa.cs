@@ -16,7 +16,7 @@ namespace projetoTelas
         {
             var db = new AppContext();
             IEnumerable<Pessoa> listaPessoas = db.Pessoas.Where(c => c.Nome.Contains(valorPesquisado));
-            return listaPessoas;
+            return listaPessoas.ToList();
         }
         public void InserePessoa(Pessoa pessoa)
         {
@@ -24,6 +24,7 @@ namespace projetoTelas
             {
                 var db = new AppContext();
                 db.Pessoas.Add(pessoa);
+                db.SaveChanges();
                 MessageBox.Show("Salvo com sucesso");
             }
             catch (Exception e)

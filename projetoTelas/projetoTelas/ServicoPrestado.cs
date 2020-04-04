@@ -1,10 +1,12 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace projetoTelas
 {[Table("ServicosPrestados")]
     public class ServicoPrestado
     {
+        [Key]
         public int IdServico { get; set; }
         public string DescricaoServico { get; set; }
         public decimal ValorTotal { get; set; }

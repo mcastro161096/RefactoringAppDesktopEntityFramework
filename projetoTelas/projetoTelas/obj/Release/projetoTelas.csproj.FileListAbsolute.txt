@@ -40,7 +40,6 @@ C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTela
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\bin\Release\EntityFramework.SqlServer.dll
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\bin\Release\EntityFramework.xml
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\bin\Release\EntityFramework.SqlServer.xml
-C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.csprojAssemblyReference.cache
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormCadastroCliente.resources
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormInicial.resources
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormResultadoPesquisa.resources
@@ -54,3 +53,6 @@ C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTela
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormCadastroServico.resources
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormEditaOuExcluiServico.resources
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.FormInformacoesCliente.resources
+C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.csprojAssemblyReference.cache
+C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.Migrations.InitialCreate.resources
+C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.Migrations.AlterandoTabelaPessoas.resources
