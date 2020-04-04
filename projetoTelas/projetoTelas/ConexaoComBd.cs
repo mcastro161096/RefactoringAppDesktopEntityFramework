@@ -31,18 +31,18 @@ namespace projetoTelas
             return;
         }
 
-        public void AtualizaPessoaEServico(Pessoa pessoa, PessoaServicoPrestado servico)
+        public void AtualizaPessoaEServico(Pessoa pessoa, ServicoPrestado servico)
         {
             var conexaoAtualizaPessoa = new ConexaoComBd();
             var conexao = conexaoAtualizaPessoa.AbreConexaoComBd();
-            var cmdText = $@"SELECT CODPESSOA FROM PESSOASERVICOPRESTADO WHERE CODPESSOA = '{pessoa.CodPessoa}'";
+            var cmdText = $@"SELECT CODPESSOA FROM PESSOASERVICOPRESTADO WHERE CODPESSOA = '{pessoa.IdPessoa}'";
             SqlCommand comando = new SqlCommand(cmdText, conexao);
             comando.ExecuteScalar();
              var verificaSeJaTemServico = comando.ExecuteScalar();
 
             if (verificaSeJaTemServico == null)
             {
-                cmdText = ($@"INSERT INTO PESSOASERVICOPRESTADO (CODPESSOA, DESCRICAOSERVICO,  DATASERVICO ) VALUES ({pessoa.CodPessoa}, '{servico.DescricaoServico} +{servico.DataServico}', '{servico.DataServico}')");
+                cmdText = ($@"INSERT INTO PESSOASERVICOPRESTADO (CODPESSOA, DESCRICAOSERVICO,  DATASERVICO ) VALUES ({pessoa.IdPessoa}, '{servico.DescricaoServico} +{servico.DataServico}', '{servico.DataServico}')");
                 //fazInsertNaTabela
                 comando = new SqlCommand(cmdText, conexao);
                 comando.ExecuteNonQuery();
@@ -52,10 +52,10 @@ namespace projetoTelas
             {
                 try
                 {
-                    cmdText = ($@"UPDATE PESSOAS SET NOME = '{pessoa.Nome.ToString()}' WHERE CODPESSOA = {pessoa.CodPessoa}
-                UPDATE PESSOAS SET TELEFONE = '{pessoa.Telefone.ToString()}' WHERE CODPESSOA = {pessoa.CodPessoa}
-                UPDATE PESSOAS SET PLACAVEICULO = '{pessoa.PlacaVeiculo.ToString()}' WHERE CODPESSOA = {pessoa.CodPessoa}
-                UPDATE PESSOASERVICOPRESTADO SET DESCRICAOSERVICO = '{servico.DescricaoServico.ToString()}' WHERE CODPESSOA = {pessoa.CodPessoa}");
+                    cmdText = ($@"UPDATE PESSOAS SET NOME = '{pessoa.Nome.ToString()}' WHERE CODPESSOA = {pessoa.IdPessoa}
+                UPDATE PESSOAS SET TELEFONE = '{pessoa.Telefone.ToString()}' WHERE CODPESSOA = {pessoa.IdPessoa}
+                UPDATE PESSOAS SET PLACAVEICULO = '{pessoa.PlacaVeiculo.ToString()}' WHERE CODPESSOA = {pessoa.IdPessoa}
+                UPDATE PESSOASERVICOPRESTADO SET DESCRICAOSERVICO = '{servico.DescricaoServico.ToString()}' WHERE CODPESSOA = {pessoa.IdPessoa}");
                     //fazUpdateSeJaExiste
                     comando = new SqlCommand(cmdText, conexao);
                     comando.ExecuteNonQuery();

@@ -62,10 +62,10 @@ namespace projetoTelas
         {
             ConexaoComBd atualizadorPessoaServico = new ConexaoComBd();
             Pessoa pessoa = new Pessoa();
-            PessoaServicoPrestado servico = new PessoaServicoPrestado();
+            ServicoPrestado servico = new ServicoPrestado();
             if (botaEditar.Enabled == true)
             {
-                pessoa.CodPessoa = CodPessoaClienteSelecionado;
+                pessoa.IdPessoa = CodPessoaClienteSelecionado;
                 pessoa.Nome = txtBoxNomePessoa.Text.ToString();
                 pessoa.Telefone = txtBoxTelefone.Text.ToString();
                 pessoa.PlacaVeiculo = txtBoxPlacaVeiculo.Text.ToString();
@@ -74,7 +74,7 @@ namespace projetoTelas
             }
             else
             {
-                pessoa.CodPessoa = CodPessoaClienteSelecionado;
+                pessoa.IdPessoa = CodPessoaClienteSelecionado;
                 pessoa.Nome = txtBoxNomePessoa.Text.ToString();
                 pessoa.Telefone = txtBoxTelefone.Text.ToString();
                 pessoa.PlacaVeiculo = txtBoxPlacaVeiculo.Text.ToString();
