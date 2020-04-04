@@ -93,7 +93,6 @@ namespace projetoTelas
                 try
                 {
                     ConexaoComBd excluiServico = new ConexaoComBd();
-                    excluiServico.AbreConexaoComBd();
                     excluiServico.ExcluiServico(IdServicoSelecionado);
                 }
                 catch (Exception execaoAoExcluirServico)

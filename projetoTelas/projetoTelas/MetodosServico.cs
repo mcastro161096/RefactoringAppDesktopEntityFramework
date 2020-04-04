@@ -45,10 +45,20 @@ namespace projetoTelas
                 MessageBox.Show(e.Message);
             }
         }
-        public void ExcluiServico(int codServico)
+        public void ExcluiServico(int idServico)
         {
 
-            MessageBox.Show("Serviço excluído!");
+            try
+            {
+                var db = new AppContext();
+                ServicoPrestado servico = db.ServicosPrestados.Find(idServico);
+                db.ServicosPrestados.Remove(servico);
+                MessageBox.Show("Serviço excluído!");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
 
         }
 
