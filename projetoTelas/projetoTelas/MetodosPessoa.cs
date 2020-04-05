@@ -12,11 +12,11 @@ namespace projetoTelas
     {
         // public static System.Globalization.CultureInfo DefaultThreadCurrentCulture { get; set; }
         //CultureInfo culture = CultureInfo.CreateSpecificCulture("en-BR");
-        public object BuscaPessoas(string valorPesquisado)
+        public IList<Pessoa> BuscaPessoas(string valorPesquisado)
         {
             var db = new AppContext();
             var listaPessoas = db.Pessoas.SqlQuery($"select IdPessoa, Nome, Telefone, PlacaVeiculo from Pessoas where Nome like '%{valorPesquisado}%'").ToList(); //(c => c.Nome.Contains(valorPesquisado));
-            return listaPessoas.ToList();
+            return listaPessoas;
         }
         public void InserePessoa(Pessoa pessoa)
         {

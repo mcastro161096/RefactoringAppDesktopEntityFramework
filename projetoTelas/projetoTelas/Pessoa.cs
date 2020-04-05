@@ -15,7 +15,6 @@ namespace projetoTelas
         public string Nome { get; set; }
         public string Telefone { get; set; }
         public string PlacaVeiculo { get; set; }
-        public virtual ICollection<ServicoPrestado> ServicosPrestados { get; set; }
 
 
     }
