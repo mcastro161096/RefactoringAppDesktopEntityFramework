@@ -131,15 +131,6 @@
       <DependentUpon>FormResultadoPesquisa.cs</DependentUpon>
     </Compile>
     <Compile Include="MetodosServico.cs" />
-    <Compile Include="Migrations\202004042053445_InitialCreate.cs" />
-    <Compile Include="Migrations\202004042053445_InitialCreate.designer.cs">
-      <DependentUpon>202004042053445_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004042121308_AlterandoTabelaPessoas.cs" />
-    <Compile Include="Migrations\202004042121308_AlterandoTabelaPessoas.designer.cs">
-      <DependentUpon>202004042121308_AlterandoTabelaPessoas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,12 +152,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormResultadoPesquisa.resx">
       <DependentUpon>FormResultadoPesquisa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004042053445_InitialCreate.resx">
-      <DependentUpon>202004042053445_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004042121308_AlterandoTabelaPessoas.resx">
-      <DependentUpon>202004042121308_AlterandoTabelaPessoas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -206,6 +191,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
