@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
@@ -31,8 +32,8 @@ namespace projetoTelas
         {
             ConexaoComBd conexaoComBd = new ConexaoComBd();
             FormResultadoPesquisa frm3 = new FormResultadoPesquisa();
-            var db = new AppContext();
-            frm3.dg.DataSource = conexaoComBd.BuscaPessoas(txbPesquisa.Text.ToString());
+            var listaDePessoas = conexaoComBd.BuscaPessoas(txbPesquisa.Text.ToString());
+            frm3.dg.DataSource = listaDePessoas;
             frm3.txbPesquisa.Text = txbPesquisa.Text;
             frm3.ShowDialog();
         }

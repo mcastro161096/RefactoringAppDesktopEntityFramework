@@ -15,7 +15,7 @@ namespace projetoTelas
         public object BuscaPessoas(string valorPesquisado)
         {
             var db = new AppContext();
-            IEnumerable<Pessoa> listaPessoas = db.Pessoas.Where(c => c.Nome.Contains(valorPesquisado));
+            var listaPessoas = db.Pessoas.SqlQuery($"select IdPessoa, Nome, Telefone, PlacaVeiculo from Pessoas where Nome like '%{valorPesquisado}%'").ToList(); //(c => c.Nome.Contains(valorPesquisado));
             return listaPessoas.ToList();
         }
         public void InserePessoa(Pessoa pessoa)
