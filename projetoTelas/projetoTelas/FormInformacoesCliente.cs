@@ -40,7 +40,7 @@ namespace projetoTelas
         {
             var db = new AppContext();
             IEnumerable<ServicoPrestado> servicos = db.ServicosPrestados.Where(c => c.PessoaId ==IdPessoaClienteSelecionado);
-            dgInformacoes.DataSource = servicos;
+            dgInformacoes.DataSource = servicos.ToList();
             try
             {
                 foreach (DataGridViewRow linha in dgInformacoes.Rows)
@@ -57,7 +57,7 @@ namespace projetoTelas
             {
                 MessageBox.Show(e.Message);
             }
-            return servicos;
+            return servicos.ToList();
         }
         private void CliqueBotaoCancelar(object sender, EventArgs e)
         {

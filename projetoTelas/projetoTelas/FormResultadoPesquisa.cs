@@ -18,12 +18,13 @@ namespace projetoTelas
         public void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
-            {
+            {             
                 FormInformacoesCliente frm4 = new FormInformacoesCliente(this);
                 int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
                 frm4.IdPessoaClienteSelecionado = Convert.ToInt32(selectedRow.Cells[0].Value);
                 frm4.txbPesquisa.Text = txbPesquisa.Text;
+                MessageBox.Show(frm4.IdPessoaClienteSelecionado.ToString());
                 frm4.ShowDialog();
                 //private void button1_Click(object sender, EventArgs e)
                 //{
