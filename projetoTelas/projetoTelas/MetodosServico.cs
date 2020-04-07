@@ -21,6 +21,7 @@ namespace projetoTelas
             {
                 var db = new AppContext();
                 db.ServicosPrestados.Add(servico);
+                db.SaveChanges();
                 MessageBox.Show("Serviço salvo com sucesso!");
             }
             catch (System.Data.SqlClient.SqlException e)

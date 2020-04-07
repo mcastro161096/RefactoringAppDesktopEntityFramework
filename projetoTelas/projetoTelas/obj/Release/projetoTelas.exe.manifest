@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="projetoTelas.exe" size="46008">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="projetoTelas.exe" size="60344">
       <assemblyIdentity name="projetoTelas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vQYS5rg/RLWLS5hbrruoSnVensB7i27mcgugnieCY5w=</dsig:DigestValue>
+        <dsig:DigestValue>BRqDk6gMaaedS1lhgPY5XLBBDuw1y16LkIQN9cXmR8E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

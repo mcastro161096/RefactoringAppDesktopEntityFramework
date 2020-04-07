@@ -131,6 +131,15 @@
       <DependentUpon>FormResultadoPesquisa.cs</DependentUpon>
     </Compile>
     <Compile Include="MetodosServico.cs" />
+    <Compile Include="Migrations\202004050058174_InitialCreate.cs" />
+    <Compile Include="Migrations\202004050058174_InitialCreate.designer.cs">
+      <DependentUpon>202004050058174_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004070211225_SetandoTamanhosCampos.cs" />
+    <Compile Include="Migrations\202004070211225_SetandoTamanhosCampos.designer.cs">
+      <DependentUpon>202004070211225_SetandoTamanhosCampos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -152,6 +161,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormResultadoPesquisa.resx">
       <DependentUpon>FormResultadoPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004050058174_InitialCreate.resx">
+      <DependentUpon>202004050058174_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004070211225_SetandoTamanhosCampos.resx">
+      <DependentUpon>202004070211225_SetandoTamanhosCampos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -192,9 +207,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
