@@ -38,7 +38,8 @@ namespace projetoTelas
                     servico.DataServico = dateTimePicker1.Value;
                     servico.DescricaoServico = txbServicoPrestado.Text.ToString();
                     insereServico.InsereServico(servico);
-                    formInformacoesCliente.dgInformacoes.DataSource = formInformacoesCliente.PreencheGridFormInformacoesCliente();
+                    formInformacoesCliente.PreencheGridFormInformacoesCliente();
+                   // formInformacoesCliente.dgInformacoes.DataSource = formInformacoesCliente.();
                     this.Close();
                 }
                 catch (Exception ex)

@@ -21,7 +21,7 @@ namespace projetoTelas
             //MessageBox.Show(IdServicoSelecionado.ToString());
             var buscaServico = new ConexaoComBd();
             var db = new AppContext();
-            ServicoPrestado servico = buscaServico.BuscaServico(IdServicoSelecionado);
+            ServicoPrestado servico = buscaServico.BuscaUmServicoEspecifico(IdServicoSelecionado);
             txbValorTotal.Text = string.Format("{0:#,##0.00}", Double.Parse(servico.ValorTotal.ToString()));
             txbValorPago.Text = string.Format("{0:#,##0.00}", Double.Parse(servico.ValorPago.ToString()));
             cmbxPago.Text = servico.Pago.ToString();
@@ -75,7 +75,8 @@ namespace projetoTelas
                     servicoEditado.DataServico = (dateTimePicker1.Value);
                     servicoEditado.DescricaoServico = txbServicoPrestado.Text.ToString();
                     atualizaServico.AtualizaServico(servicoEditado);
-                    formInformacoesCliente.dgInformacoes.DataSource = formInformacoesCliente.PreencheGridFormInformacoesCliente();
+                    formInformacoesCliente.PreencheGridFormInformacoesCliente();
+                    //formInformacoesCliente.dgInformacoes.DataSource = formInformacoesCliente.PreencheGridFormInformacoesCliente();
                     this.Close();
                 }
                 catch (Exception execaoAoAtualizarServico)
@@ -99,7 +100,8 @@ namespace projetoTelas
                 {
                     MessageBox.Show(execaoAoExcluirServico.Message);
                 }
-                formInformacoesCliente.dgInformacoes.DataSource = formInformacoesCliente.PreencheGridFormInformacoesCliente();
+                formInformacoesCliente.PreencheGridFormInformacoesCliente();
+               // formInformacoesCliente.dgInformacoes.DataSource = formInformacoesCliente.PreencheGridFormInformacoesCliente();
                 this.Close();
             }
 

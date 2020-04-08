@@ -9,12 +9,20 @@ namespace projetoTelas
 {
     public partial class ConexaoComBd
     {
-        public ServicoPrestado BuscaServico(int idServico)
+        public ServicoPrestado BuscaUmServicoEspecifico(int idServico)
         {
             var db = new AppContext();
             ServicoPrestado servico = db.ServicosPrestados.Find(idServico);
             return servico;
         }
+
+        public object BuscaListaDeServicos(int idPessoaClienteSelecionado)
+        {
+            var db = new AppContext();
+            IEnumerable<ServicoPrestado> servicos = db.ServicosPrestados.Where(c => c.PessoaId == idPessoaClienteSelecionado);
+            return servicos.ToList();
+        }
+
         public void InsereServico(ServicoPrestado servico)
         {
             try
@@ -37,11 +45,18 @@ namespace projetoTelas
             {
                 var db = new AppContext();
                 ServicoPrestado servicoAtual = db.ServicosPrestados.Find(servicoEditado.IdServico);
-                servicoAtual = servicoEditado;
+                // servicoAtual. = servicoEditado;
+                // servicoAtual.i   servicoEditado.IdServico;
+                //servicoEditado.PessoaId;
+                servicoAtual.ValorTotal = servicoEditado.ValorTotal;
+                servicoAtual.ValorPago = servicoEditado.ValorPago;
+                servicoAtual.Pago = servicoEditado.Pago;
+                servicoAtual.DataServico = servicoEditado.DataServico;
+                servicoAtual.DescricaoServico = servicoEditado.DescricaoServico;
                 db.SaveChanges();
                 MessageBox.Show("Serviço editado com sucesso!");
             }
-            catch (System.Data.SqlClient.SqlException e) 
+            catch (System.Data.SqlClient.SqlException e)
             {
                 MessageBox.Show(e.Message);
             }

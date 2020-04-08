@@ -36,11 +36,11 @@ namespace projetoTelas
             this.PreencheGridFormInformacoesCliente();
 
         }
-        public object PreencheGridFormInformacoesCliente()
+        public void PreencheGridFormInformacoesCliente()
         {
-            var db = new AppContext();
-            IEnumerable<ServicoPrestado> servicos = db.ServicosPrestados.Where(c => c.PessoaId ==IdPessoaClienteSelecionado);
-            dgInformacoes.DataSource = servicos.ToList();
+            ConexaoComBd conexaoComBd = new ConexaoComBd();
+            var listaDeServicos = conexaoComBd.BuscaListaDeServicos(IdPessoaClienteSelecionado);
+            dgInformacoes.DataSource = listaDeServicos;
             try
             {
                 foreach (DataGridViewRow linha in dgInformacoes.Rows)
@@ -57,7 +57,6 @@ namespace projetoTelas
             {
                 MessageBox.Show(e.Message);
             }
-            return servicos.ToList();
         }
         private void CliqueBotaoCancelar(object sender, EventArgs e)
         {
