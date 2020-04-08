@@ -45,9 +45,6 @@ namespace projetoTelas
             {
                 var db = new AppContext();
                 ServicoPrestado servicoAtual = db.ServicosPrestados.Find(servicoEditado.IdServico);
-                // servicoAtual. = servicoEditado;
-                // servicoAtual.i   servicoEditado.IdServico;
-                //servicoEditado.PessoaId;
                 servicoAtual.ValorTotal = servicoEditado.ValorTotal;
                 servicoAtual.ValorPago = servicoEditado.ValorPago;
                 servicoAtual.Pago = servicoEditado.Pago;

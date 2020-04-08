@@ -66,14 +66,14 @@ namespace projetoTelas
         private void CliqueBotaoSalvar(object sender, EventArgs e)
         {
             ConexaoComBd conexaoComBd = new ConexaoComBd();
-            Pessoa pessoa = new Pessoa();
+            Pessoa pessoaEditada = new Pessoa();
             if (txtBoxNomePessoa.Enabled == true)
             {
-                pessoa.IdPessoa = IdPessoaClienteSelecionado;
-                pessoa.Nome = txtBoxNomePessoa.Text.ToString();
-                pessoa.Telefone = txtBoxTelefone.Text.ToString();
-                pessoa.PlacaVeiculo = txtBoxPlacaVeiculo.Text.ToString();
-               conexaoComBd.AtualizaPessoa(pessoa);
+                pessoaEditada.IdPessoa = IdPessoaClienteSelecionado;
+                pessoaEditada.Nome = txtBoxNomePessoa.Text.ToString();
+                pessoaEditada.Telefone = txtBoxTelefone.Text.ToString();
+                pessoaEditada.PlacaVeiculo = txtBoxPlacaVeiculo.Text.ToString();
+               conexaoComBd.AtualizaPessoa(pessoaEditada);
                 formResultadoPesquisa.FormResultadoPesquisa_Load_1(sender, e);
             }
             else

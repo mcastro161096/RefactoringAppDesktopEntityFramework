@@ -31,7 +31,7 @@ namespace projetoTelas
             {
                 MessageBox.Show(e.Message);
             }
-         }
+        }
 
         public void AtualizaPessoa(Pessoa pessoaEditada)
         {
@@ -39,7 +39,9 @@ namespace projetoTelas
             {
                 var db = new AppContext();
                 Pessoa pessoaAtual = db.Pessoas.Find(pessoaEditada.IdPessoa);
-                pessoaAtual = pessoaEditada;
+                pessoaAtual.Nome = pessoaEditada.Nome;
+                pessoaAtual.Telefone = pessoaEditada.Telefone;
+                pessoaAtual.PlacaVeiculo = pessoaEditada.PlacaVeiculo;
                 db.SaveChanges();
                 MessageBox.Show("Salvo com sucesso");
             }
@@ -67,10 +69,10 @@ namespace projetoTelas
 
 
         }
-       
-       
 
-       
+
+
+
 
     }
 

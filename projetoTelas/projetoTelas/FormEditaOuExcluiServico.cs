@@ -76,7 +76,6 @@ namespace projetoTelas
                     servicoEditado.DescricaoServico = txbServicoPrestado.Text.ToString();
                     atualizaServico.AtualizaServico(servicoEditado);
                     formInformacoesCliente.PreencheGridFormInformacoesCliente();
-                    //formInformacoesCliente.dgInformacoes.DataSource = formInformacoesCliente.PreencheGridFormInformacoesCliente();
                     this.Close();
                 }
                 catch (Exception execaoAoAtualizarServico)
@@ -101,7 +100,6 @@ namespace projetoTelas
                     MessageBox.Show(execaoAoExcluirServico.Message);
                 }
                 formInformacoesCliente.PreencheGridFormInformacoesCliente();
-               // formInformacoesCliente.dgInformacoes.DataSource = formInformacoesCliente.PreencheGridFormInformacoesCliente();
                 this.Close();
             }
 
