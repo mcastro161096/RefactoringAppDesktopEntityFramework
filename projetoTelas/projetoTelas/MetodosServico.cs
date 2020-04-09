@@ -19,8 +19,10 @@ namespace projetoTelas
         public object BuscaListaDeServicos(int idPessoaClienteSelecionado)
         {
             var db = new AppContext();
-            IEnumerable<ServicoPrestado> servicos = db.ServicosPrestados.Where(c => c.PessoaId == idPessoaClienteSelecionado);
-            return servicos.ToList();
+            //var servicos = db.ServicosPrestados.SqlQuery($"select IdServico,  DescricaoServico, ValorTotal, ValorPago, Pago, DataServico, PessoaId from ServicosPrestados where PessoaId = {idPessoaClienteSelecionado}").ToList();
+            var servicos = db.ServicosPrestados.Where(c => c.PessoaId == idPessoaClienteSelecionado).Select
+            (c => new { c.IdServico, c.DescricaoServico, c.ValorTotal, c.ValorPago, c.Pago, c.DataServico }).ToList();
+            return servicos;
         }
 
         public void InsereServico(ServicoPrestado servico)
