@@ -56,3 +56,4 @@ C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTela
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.Migrations.InitialCreate.resources
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.Migrations.SetandoTamanhosCampos.resources
 C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.csprojAssemblyReference.cache
+C:\Users\mathe\Documents\GitHub\RefactoringAppDesktopEntityFramework\projetoTelas\projetoTelas\obj\Release\projetoTelas.csproj.CoreCompileInputs.cache

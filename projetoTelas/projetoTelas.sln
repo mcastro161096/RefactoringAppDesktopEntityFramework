@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projetoTelas", "projetoTela
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A72B7F2B-5759-4615-9FAA-B9A4936A462D}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupProjetoTelas", "SetupProjetoTelas\SetupProjetoTelas.vdproj", "{0E69EBCE-60ED-4A63-BF6F-7E8458964A1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,8 @@ Global
 		{03817D95-CE1C-4A7F-92C0-918A9CCC0DC0}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{03817D95-CE1C-4A7F-92C0-918A9CCC0DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03817D95-CE1C-4A7F-92C0-918A9CCC0DC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E69EBCE-60ED-4A63-BF6F-7E8458964A1F}.Debug|Any CPU.ActiveCfg = Debug
+		{0E69EBCE-60ED-4A63-BF6F-7E8458964A1F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -67,6 +67,7 @@ namespace projetoTelas
                 var db = new AppContext();
                 ServicoPrestado servico = db.ServicosPrestados.Find(idServico);
                 db.ServicosPrestados.Remove(servico);
+                db.SaveChanges();
                 MessageBox.Show("Serviço excluído!");
             }
             catch (Exception e)

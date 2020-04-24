@@ -59,6 +59,7 @@ namespace projetoTelas
 
                 Pessoa pessoa = db.Pessoas.Find(idPessoa);
                 db.Pessoas.Remove(pessoa);
+                db.SaveChanges();
                 MessageBox.Show("O cliente e todos os seus serviços foram excluídos com sucesso");
 
             }
